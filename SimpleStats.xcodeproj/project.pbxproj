@@ -10,6 +10,10 @@
 		7591455D2E245A5900F27C2E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7591455C2E245A5900F27C2E /* WidgetKit.framework */; };
 		7591455F2E245A5900F27C2E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7591455E2E245A5900F27C2E /* SwiftUI.framework */; };
 		7591456C2E245A5900F27C2E /* SimpleStatsWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 7591455A2E245A5900F27C2E /* SimpleStatsWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		75914B572E2492A400F27C2E /* SimpleStatsWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 75914B4D2E2492A400F27C2E /* SimpleStatsWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		75914B612E2492C000F27C2E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7591455C2E245A5900F27C2E /* WidgetKit.framework */; };
+		75914B622E2492C000F27C2E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7591455E2E245A5900F27C2E /* SwiftUI.framework */; };
+		75914B6F2E2492C100F27C2E /* SimpleStatsWatchWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 75914B602E2492C000F27C2E /* SimpleStatsWatchWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -19,6 +23,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 759145592E245A5900F27C2E;
 			remoteInfo = SimpleStatsWidgetExtension;
+		};
+		75914B552E2492A400F27C2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 759145402E245A2F00F27C2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75914B4C2E2492A400F27C2E;
+			remoteInfo = "SimpleStatsWatch Watch App";
+		};
+		75914B6D2E2492C100F27C2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 759145402E245A2F00F27C2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75914B5F2E2492C000F27C2E;
+			remoteInfo = SimpleStatsWatchWidgetExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -34,6 +52,28 @@
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		75914B582E2492A400F27C2E /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				75914B572E2492A400F27C2E /* SimpleStatsWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75914B742E2492C100F27C2E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				75914B6F2E2492C100F27C2E /* SimpleStatsWatchWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +81,8 @@
 		7591455A2E245A5900F27C2E /* SimpleStatsWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SimpleStatsWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		7591455C2E245A5900F27C2E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		7591455E2E245A5900F27C2E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		75914B4D2E2492A400F27C2E /* SimpleStatsWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SimpleStatsWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		75914B602E2492C000F27C2E /* SimpleStatsWatchWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SimpleStatsWatchWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -77,6 +119,13 @@
 			);
 			target = 759145592E245A5900F27C2E /* SimpleStatsWidgetExtension */;
 		};
+		75914B732E2492C100F27C2E /* Exceptions for "SimpleStatsWatchWidget" folder in "SimpleStatsWatchWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 75914B5F2E2492C000F27C2E /* SimpleStatsWatchWidgetExtension */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -102,6 +151,19 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		75914B4E2E2492A400F27C2E /* SimpleStatsWatch Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "SimpleStatsWatch Watch App";
+			sourceTree = "<group>";
+		};
+		75914B632E2492C000F27C2E /* SimpleStatsWatchWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				75914B732E2492C100F27C2E /* Exceptions for "SimpleStatsWatchWidget" folder in "SimpleStatsWatchWidgetExtension" target */,
+			);
+			path = SimpleStatsWatchWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +183,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		75914B4A2E2492A400F27C2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75914B5D2E2492C000F27C2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75914B622E2492C000F27C2E /* SwiftUI.framework in Frameworks */,
+				75914B612E2492C000F27C2E /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -130,6 +208,8 @@
 				759145722E245B7500F27C2E /* Common */,
 				7591454A2E245A2F00F27C2E /* SimpleStats */,
 				759145602E245A5900F27C2E /* SimpleStatsWidget */,
+				75914B4E2E2492A400F27C2E /* SimpleStatsWatch Watch App */,
+				75914B632E2492C000F27C2E /* SimpleStatsWatchWidget */,
 				7591455B2E245A5900F27C2E /* Frameworks */,
 				759145492E245A2F00F27C2E /* Products */,
 			);
@@ -140,6 +220,8 @@
 			children = (
 				759145482E245A2F00F27C2E /* SimpleStats.app */,
 				7591455A2E245A5900F27C2E /* SimpleStatsWidgetExtension.appex */,
+				75914B4D2E2492A400F27C2E /* SimpleStatsWatch Watch App.app */,
+				75914B602E2492C000F27C2E /* SimpleStatsWatchWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,11 +246,13 @@
 				759145452E245A2F00F27C2E /* Frameworks */,
 				759145462E245A2F00F27C2E /* Resources */,
 				759145712E245A5900F27C2E /* Embed Foundation Extensions */,
+				75914B582E2492A400F27C2E /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				7591456B2E245A5900F27C2E /* PBXTargetDependency */,
+				75914B562E2492A400F27C2E /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				7591454A2E245A2F00F27C2E /* SimpleStats */,
@@ -203,6 +287,52 @@
 			productReference = 7591455A2E245A5900F27C2E /* SimpleStatsWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		75914B4C2E2492A400F27C2E /* SimpleStatsWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75914B5B2E2492A400F27C2E /* Build configuration list for PBXNativeTarget "SimpleStatsWatch Watch App" */;
+			buildPhases = (
+				75914B492E2492A400F27C2E /* Sources */,
+				75914B4A2E2492A400F27C2E /* Frameworks */,
+				75914B4B2E2492A400F27C2E /* Resources */,
+				75914B742E2492C100F27C2E /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				75914B6E2E2492C100F27C2E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				75914B4E2E2492A400F27C2E /* SimpleStatsWatch Watch App */,
+			);
+			name = "SimpleStatsWatch Watch App";
+			packageProductDependencies = (
+			);
+			productName = "SimpleStatsWatch Watch App";
+			productReference = 75914B4D2E2492A400F27C2E /* SimpleStatsWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		75914B5F2E2492C000F27C2E /* SimpleStatsWatchWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75914B702E2492C100F27C2E /* Build configuration list for PBXNativeTarget "SimpleStatsWatchWidgetExtension" */;
+			buildPhases = (
+				75914B5C2E2492C000F27C2E /* Sources */,
+				75914B5D2E2492C000F27C2E /* Frameworks */,
+				75914B5E2E2492C000F27C2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				75914B632E2492C000F27C2E /* SimpleStatsWatchWidget */,
+			);
+			name = SimpleStatsWatchWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = SimpleStatsWatchWidgetExtension;
+			productReference = 75914B602E2492C000F27C2E /* SimpleStatsWatchWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -217,6 +347,12 @@
 						CreatedOnToolsVersion = 26.0;
 					};
 					759145592E245A5900F27C2E = {
+						CreatedOnToolsVersion = 26.0;
+					};
+					75914B4C2E2492A400F27C2E = {
+						CreatedOnToolsVersion = 26.0;
+					};
+					75914B5F2E2492C000F27C2E = {
 						CreatedOnToolsVersion = 26.0;
 					};
 				};
@@ -237,6 +373,8 @@
 			targets = (
 				759145472E245A2F00F27C2E /* SimpleStats */,
 				759145592E245A5900F27C2E /* SimpleStatsWidgetExtension */,
+				75914B4C2E2492A400F27C2E /* SimpleStatsWatch Watch App */,
+				75914B5F2E2492C000F27C2E /* SimpleStatsWatchWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -250,6 +388,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		759145582E245A5900F27C2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75914B4B2E2492A400F27C2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75914B5E2E2492C000F27C2E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -273,6 +425,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		75914B492E2492A400F27C2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75914B5C2E2492C000F27C2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -280,6 +446,16 @@
 			isa = PBXTargetDependency;
 			target = 759145592E245A5900F27C2E /* SimpleStatsWidgetExtension */;
 			targetProxy = 7591456A2E245A5900F27C2E /* PBXContainerItemProxy */;
+		};
+		75914B562E2492A400F27C2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75914B4C2E2492A400F27C2E /* SimpleStatsWatch Watch App */;
+			targetProxy = 75914B552E2492A400F27C2E /* PBXContainerItemProxy */;
+		};
+		75914B6E2E2492C100F27C2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75914B5F2E2492C000F27C2E /* SimpleStatsWatchWidgetExtension */;
+			targetProxy = 75914B6D2E2492C100F27C2E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -529,6 +705,138 @@
 			};
 			name = Release;
 		};
+		75914B592E2492A400F27C2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 92N443P47Y;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SimpleStatsWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.tier9digital.SimpleStats;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tier9digital.SimpleStats.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Debug;
+		};
+		75914B5A2E2492A400F27C2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 92N443P47Y;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SimpleStatsWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.tier9digital.SimpleStats;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tier9digital.SimpleStats.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Release;
+		};
+		75914B712E2492C100F27C2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 92N443P47Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimpleStatsWatchWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SimpleStatsWatchWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tier9digital.SimpleStats.watchkitapp.SimpleStatsWatchWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Debug;
+		};
+		75914B722E2492C100F27C2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 92N443P47Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimpleStatsWatchWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SimpleStatsWatchWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tier9digital.SimpleStats.watchkitapp.SimpleStatsWatchWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -555,6 +863,24 @@
 			buildConfigurations = (
 				7591456F2E245A5900F27C2E /* Debug */,
 				759145702E245A5900F27C2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75914B5B2E2492A400F27C2E /* Build configuration list for PBXNativeTarget "SimpleStatsWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75914B592E2492A400F27C2E /* Debug */,
+				75914B5A2E2492A400F27C2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75914B702E2492C100F27C2E /* Build configuration list for PBXNativeTarget "SimpleStatsWatchWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75914B712E2492C100F27C2E /* Debug */,
+				75914B722E2492C100F27C2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
