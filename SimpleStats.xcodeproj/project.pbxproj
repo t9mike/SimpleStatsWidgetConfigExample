@@ -6,14 +6,100 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		7591455D2E245A5900F27C2E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7591455C2E245A5900F27C2E /* WidgetKit.framework */; };
+		7591455F2E245A5900F27C2E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7591455E2E245A5900F27C2E /* SwiftUI.framework */; };
+		7591456C2E245A5900F27C2E /* SimpleStatsWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 7591455A2E245A5900F27C2E /* SimpleStatsWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7591456A2E245A5900F27C2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 759145402E245A2F00F27C2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 759145592E245A5900F27C2E;
+			remoteInfo = SimpleStatsWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		759145712E245A5900F27C2E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7591456C2E245A5900F27C2E /* SimpleStatsWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		759145482E245A2F00F27C2E /* SimpleStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7591455A2E245A5900F27C2E /* SimpleStatsWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SimpleStatsWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7591455C2E245A5900F27C2E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		7591455E2E245A5900F27C2E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		7591456D2E245A5900F27C2E /* Exceptions for "SimpleStatsWidget" folder in "SimpleStatsWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 759145592E245A5900F27C2E /* SimpleStatsWidgetExtension */;
+		};
+		759145752E245B8400F27C2E /* Exceptions for "Common" folder in "SimpleStats" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				StepGoalEntity.swift,
+				StepGoalIntent.swift,
+				StepGoalWidget.swift,
+				WaterFrequencyEntity.swift,
+				WaterReminderIntent.swift,
+				WaterReminderWidget.swift,
+				WidgetBundle.swift,
+			);
+			target = 759145472E245A2F00F27C2E /* SimpleStats */;
+		};
+		75914B022E248CA200F27C2E /* Exceptions for "Common" folder in "SimpleStatsWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				StepGoalEntity.swift,
+				StepGoalIntent.swift,
+				StepGoalWidget.swift,
+				WaterFrequencyEntity.swift,
+				WaterReminderIntent.swift,
+				WaterReminderWidget.swift,
+				WidgetBundle.swift,
+			);
+			target = 759145592E245A5900F27C2E /* SimpleStatsWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		7591454A2E245A2F00F27C2E /* SimpleStats */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = SimpleStats;
+			sourceTree = "<group>";
+		};
+		759145602E245A5900F27C2E /* SimpleStatsWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				7591456D2E245A5900F27C2E /* Exceptions for "SimpleStatsWidget" folder in "SimpleStatsWidgetExtension" target */,
+			);
+			path = SimpleStatsWidget;
+			sourceTree = "<group>";
+		};
+		759145722E245B7500F27C2E /* Common */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				759145752E245B8400F27C2E /* Exceptions for "Common" folder in "SimpleStats" target */,
+				75914B022E248CA200F27C2E /* Exceptions for "Common" folder in "SimpleStatsWidgetExtension" target */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,13 +112,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		759145572E245A5900F27C2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7591455F2E245A5900F27C2E /* SwiftUI.framework in Frameworks */,
+				7591455D2E245A5900F27C2E /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		7591453F2E245A2F00F27C2E = {
 			isa = PBXGroup;
 			children = (
+				759145722E245B7500F27C2E /* Common */,
 				7591454A2E245A2F00F27C2E /* SimpleStats */,
+				759145602E245A5900F27C2E /* SimpleStatsWidget */,
+				7591455B2E245A5900F27C2E /* Frameworks */,
 				759145492E245A2F00F27C2E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +139,18 @@
 			isa = PBXGroup;
 			children = (
 				759145482E245A2F00F27C2E /* SimpleStats.app */,
+				7591455A2E245A5900F27C2E /* SimpleStatsWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		7591455B2E245A5900F27C2E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7591455C2E245A5900F27C2E /* WidgetKit.framework */,
+				7591455E2E245A5900F27C2E /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,13 +163,16 @@
 				759145442E245A2F00F27C2E /* Sources */,
 				759145452E245A2F00F27C2E /* Frameworks */,
 				759145462E245A2F00F27C2E /* Resources */,
+				759145712E245A5900F27C2E /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7591456B2E245A5900F27C2E /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				7591454A2E245A2F00F27C2E /* SimpleStats */,
+				759145722E245B7500F27C2E /* Common */,
 			);
 			name = SimpleStats;
 			packageProductDependencies = (
@@ -69,6 +180,28 @@
 			productName = SimpleStats;
 			productReference = 759145482E245A2F00F27C2E /* SimpleStats.app */;
 			productType = "com.apple.product-type.application";
+		};
+		759145592E245A5900F27C2E /* SimpleStatsWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7591456E2E245A5900F27C2E /* Build configuration list for PBXNativeTarget "SimpleStatsWidgetExtension" */;
+			buildPhases = (
+				759145562E245A5900F27C2E /* Sources */,
+				759145572E245A5900F27C2E /* Frameworks */,
+				759145582E245A5900F27C2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				759145602E245A5900F27C2E /* SimpleStatsWidget */,
+			);
+			name = SimpleStatsWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = SimpleStatsWidgetExtension;
+			productReference = 7591455A2E245A5900F27C2E /* SimpleStatsWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +214,9 @@
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					759145472E245A2F00F27C2E = {
+						CreatedOnToolsVersion = 26.0;
+					};
+					759145592E245A5900F27C2E = {
 						CreatedOnToolsVersion = 26.0;
 					};
 				};
@@ -100,12 +236,20 @@
 			projectRoot = "";
 			targets = (
 				759145472E245A2F00F27C2E /* SimpleStats */,
+				759145592E245A5900F27C2E /* SimpleStatsWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		759145462E245A2F00F27C2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		759145582E245A5900F27C2E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +266,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		759145562E245A5900F27C2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7591456B2E245A5900F27C2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 759145592E245A5900F27C2E /* SimpleStatsWidgetExtension */;
+			targetProxy = 7591456A2E245A5900F27C2E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		759145512E245A3000F27C2E /* Debug */ = {
@@ -269,8 +428,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tier9digital.SimpleStats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_APPROACHABLE_CONCURRENCY = NO;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -301,8 +460,68 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tier9digital.SimpleStats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_APPROACHABLE_CONCURRENCY = NO;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7591456F2E245A5900F27C2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 92N443P47Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimpleStatsWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SimpleStatsWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tier9digital.SimpleStats.SimpleStatsWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		759145702E245A5900F27C2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 92N443P47Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimpleStatsWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SimpleStatsWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tier9digital.SimpleStats.SimpleStatsWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -327,6 +546,15 @@
 			buildConfigurations = (
 				759145542E245A3000F27C2E /* Debug */,
 				759145552E245A3000F27C2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7591456E2E245A5900F27C2E /* Build configuration list for PBXNativeTarget "SimpleStatsWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7591456F2E245A5900F27C2E /* Debug */,
+				759145702E245A5900F27C2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
