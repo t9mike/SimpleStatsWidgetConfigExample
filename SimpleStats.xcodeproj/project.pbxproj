@@ -126,6 +126,19 @@
 			);
 			target = 75914B5F2E2492C000F27C2E /* SimpleStatsWatchWidgetExtension */;
 		};
+		75914B7C2E24933800F27C2E /* Exceptions for "Common" folder in "SimpleStatsWatchWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				StepGoalEntity.swift,
+				StepGoalIntent.swift,
+				StepGoalWidget.swift,
+				WaterFrequencyEntity.swift,
+				WaterReminderIntent.swift,
+				WaterReminderWidget.swift,
+				WidgetBundle.swift,
+			);
+			target = 75914B5F2E2492C000F27C2E /* SimpleStatsWatchWidgetExtension */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -147,6 +160,7 @@
 			exceptions = (
 				759145752E245B8400F27C2E /* Exceptions for "Common" folder in "SimpleStats" target */,
 				75914B022E248CA200F27C2E /* Exceptions for "Common" folder in "SimpleStatsWidgetExtension" target */,
+				75914B7C2E24933800F27C2E /* Exceptions for "Common" folder in "SimpleStatsWatchWidgetExtension" target */,
 			);
 			path = Common;
 			sourceTree = "<group>";

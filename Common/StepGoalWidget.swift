@@ -8,10 +8,14 @@ struct StepGoalEntry: TimelineEntry {
 }
 
 struct StepGoalProvider: AppIntentTimelineProvider {
-   
-    func placeholder(in context: Context) -> StepGoalEntry {
-        StepGoalEntry(date: Date(), configuration: .sample)
+    func recommendations() -> [AppIntentRecommendation<StepGoalIntent>] {
+        return []
     }
+    
+    func placeholder(in context: Context) -> StepGoalEntry {
+        .init(date: .now, configuration: .sample)
+    }
+    
 
     func snapshot(for configuration: StepGoalIntent, in context: Context) async -> StepGoalEntry {
         StepGoalEntry(date: Date(), configuration: configuration)
@@ -57,14 +61,19 @@ struct StepGoalWidget: Widget {
         }
         .configurationDisplayName("Step Goal")
         .description("Your daily step target.")
+        #if os(watchOS)
+        .supportedFamilies([.accessoryCircular, .accessoryRectangular]) // ✅ Only small size
+        #else
         .supportedFamilies([.systemSmall]) // ✅ Only small size
+        #endif
     }
 
 }
 
-
+#if os(ios)
 #Preview(as: .systemSmall) {
     StepGoalWidget()
 } timeline: {
     StepGoalEntry(date: .now, configuration: .sample)
 }
+#endif

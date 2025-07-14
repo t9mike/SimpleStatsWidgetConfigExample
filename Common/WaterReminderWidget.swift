@@ -8,6 +8,10 @@ struct WaterReminderEntry: TimelineEntry {
 }
 
 struct WaterReminderProvider: AppIntentTimelineProvider {
+    func recommendations() -> [AppIntentRecommendation<WaterReminderIntent>] {
+        return []
+    }
+    
     
     func placeholder(in context: Context) -> WaterReminderEntry {
         .init(date: .now, configuration: .sample)
@@ -55,13 +59,20 @@ struct WaterReminderWidget: Widget {
         }
         .configurationDisplayName("Water Reminder")
         .description("Set your hydration frequency.")
+        #if os(ios)
         .supportedFamilies([.systemMedium, .systemLarge]) // ✅ Medium & Large only
+        #else
+        .supportedFamilies([.accessoryRectangular, .accessoryCircular])
+        #endif
     }
     
 }
 
+#if os(iOS)
 #Preview(as: .systemSmall) {
     WaterReminderWidget()
 } timeline: {
     WaterReminderEntry(date: .now, configuration: .sample)
 }
+#endif
+
