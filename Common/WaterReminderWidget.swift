@@ -41,7 +41,7 @@ struct WaterReminderWidgetView: View {
     var body: some View {
         VStack {
             Text("💧 Water Reminder")
-            Text(entry.configuration.frequency?.label() ?? "")
+            Text(entry.configuration.frequency.label())
                 .font(.footnote)
         }
         .padding()
