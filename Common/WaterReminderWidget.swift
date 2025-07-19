@@ -29,8 +29,8 @@ struct WaterReminderProvider: AppIntentTimelineProvider {
 
 extension WaterReminderIntent {
     static var sample: WaterReminderIntent {
-        var intent = WaterReminderIntent()
-        intent.frequency = WaterFrequencyEntity(id: "3h", label: "Every 3 Hours")
+        let intent = WaterReminderIntent()
+        intent.frequency = .OneHour
         return intent
     }
 }
@@ -41,8 +41,8 @@ struct WaterReminderWidgetView: View {
     var body: some View {
         VStack {
             Text("💧 Water Reminder")
-            Text(entry.configuration.frequency?.label ?? "")
-                .font(.title3)
+            Text(entry.configuration.frequency?.label() ?? "")
+                .font(.footnote)
         }
         .padding()
     }

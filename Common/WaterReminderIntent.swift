@@ -5,5 +5,5 @@ struct WaterReminderIntent: WidgetConfigurationIntent {
     static var description = IntentDescription("Set how often you want to be reminded to drink water")
 
     @Parameter(title: "Frequency")
-    var frequency: WaterFrequencyEntity?
+    var frequency: WaterFrequency?
 }
